@@ -42,7 +42,9 @@
     "block_genesis": "GENESIS",
 
     // global
-    "difficulty": "Difficulty",
+    "difficulty": "PoW Difficulty",
+    "gethivedifficulty": "Hive Difficulty",
+    "getbeecost": "Bee Cost",
     "network": "Network",
     "height": "Height",
     "timestamp": "Timestamp",
