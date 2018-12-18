@@ -42,7 +42,7 @@ html
         }
        function update_hive_diff(){   
           $.ajax({url: '/api/gethivedifficulty', success: function(data){
-            $("#gethivedifficulty").text(data).toFixed(4); 
+            $("#gethivedifficulty").text(data.toFixed(4)); 
           }});
         }
 
