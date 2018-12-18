@@ -42,7 +42,7 @@ html
         }
        function update_hive_diff(){   
           $.ajax({url: '/api/gethivedifficulty', success: function(data){
-            $("#gethivedifficulty").text(data); 
+            $("#gethivedifficulty").text(data).toFixed(4); 
           }});
         }
 
@@ -59,7 +59,8 @@ html
             $("#honeypot").text((data.honey_pot) / 10000000);
             $("#immature_bct_count").text(data.immature_bct_count);
             $("#mature_bct_count").text(data.mature_bct_count);
-            $("#gashi_index").text((((data.mature_bee_count) / 20160000) * 100).toFixed(2)); 
+            $("#gashi_index").text((((data.mature_bee_count) / 20160000) * 100).toFixed(2));
+            $("#gashi_index_stat").text((((data.mature_bee_count) / 20160000) * 100).toFixed(2)); 
           }});
         }
 
@@ -214,7 +215,7 @@ html
             .panel-heading
               strong Bee Population Index
             .panel-body
-               label#gashi_index -
+               label#gashi_index_stat -
  
                  
       .row.text-center(style='margin-top:10px;margin-bottom:20px;')
