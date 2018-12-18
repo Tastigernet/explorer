@@ -212,14 +212,10 @@ html
         .col-md-2
           .panel.panel-default.hidden-sm.hidden-xs
             .panel-heading
-              strong #{settings.markets.exchange} Price
+              strong Bee Population Index
             .panel-body
-              if settings.index.difficulty == 'Hybrid'
-               label#lastPrice -
-               <br>
-               label#lblX1
-              else
-               label#lastPrice - 
+               label#gashi_index -
+ 
                  
       .row.text-center(style='margin-top:10px;margin-bottom:20px;')
         form.form-inline(method='post', action='/search')      

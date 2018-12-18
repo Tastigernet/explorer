@@ -61,7 +61,7 @@
   // menu settings
   "display": {
     "api": true,
-    "markets": true,
+    "markets": false,
     "richlist": true,
     "twitter": true,
     "facebook": false,
@@ -117,10 +117,10 @@
   },
 
   // twitter, facebook, googleplus, youtube
-  "twitter": "litecoincash",
-  "facebook": "yourfacebookpage",
+  "twitter": "@LitecoinCash",
+  "facebook": "@LitecoinCash",
   "googleplus": "yourgooglepluspage",
-  "youtube": "youryoutubechannel",
+  "youtube": "@Litecoincash",
 
   //genesis
   "genesis_tx": "97ddfbbae6be97fd6cdf3e7ca13232a3afff2353e29badfab7f73011edd4ced9",
