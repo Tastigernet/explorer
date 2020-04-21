@@ -13,6 +13,7 @@
     "menu_movement": "Movement",
     "menu_node": "Nodes",
     "menu_network": "Network",
+    "menu_forge" : "The Forge",
 
     // explorer view
     "ex_title": "Block Explorer",
@@ -43,8 +44,9 @@
 
     // global
     "difficulty": "PoW Difficulty",
-    "gethivedifficulty": "Hive Difficulty",
-    "getbeecost": "Bee Cost",
+    "getforgedifficulty": "Forge Difficulty",
+    "gethammercost": "Hammer Cost",
+    "type": "Type",
     "network": "Network",
     "height": "Height",
     "timestamp": "Timestamp",
@@ -56,7 +58,7 @@
     "total": "Total",
     "bits": "Bits",
     "nonce": "Nonce",
-    "new_coins": "New Coins",
+    "created_coins": "Created Coins",
     "proof_of_stake": "PoS",
     "initial_index_alert": "Indexing is currently incomplete, functionality is limited until index is up-to-date.",
 
@@ -90,9 +92,9 @@
     "api_calls": "API Calls",
     "api_getnetworkhashps": "Returns the current network hashrate. (hash/s)",
     "api_getdifficulty": "Returns the current difficulty.",
-    "api_gethivedifficulty": "Returns the current hive difficulty.",
-    "api_getnetworkhiveinfo": "Lists the mature and immature bee populations across the entire network.",
-    "api_getbeecost": "Returns the cost to create a single bee at given block height.",
+    "api_getforgedifficulty": "Returns the current forge difficulty.",
+    "api_getnetworkforgeinfo": "Lists the ready and created hammer populations across the entire network.",
+    "api_gethammercost": "Returns the cost to create a single hammer at given block height.",
     "api_getconnectioncount": "Returns the number of connections the block explorer has to other nodes.",
     "api_getblockcount": "Returns the current block index.",
     "api_getblockhash": "Returns the hash of the block at ; index 0 is the genesis block.",
@@ -136,7 +138,7 @@
     "yobit": "Yobit",
     "empoex": "Empoex",
     "cryptsy": "Cryptsy",
-    "cryptopia": "Cryptopia",
+    // "cryptopia": "Cryptopia",
     "ccex": "C-Cex",
 
     // Heavy rewards view
@@ -150,5 +152,5 @@
     "heavy_estnext": "Est. Next",
     "heavy_changein": "Reward change in approximately",
     "heavy_key": "Key",
-    "heavy_lastxvotes": "Last 20 votes",
+    "heavy_lastxvotes": "Last 20 votes"
 }
