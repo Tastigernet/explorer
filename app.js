@@ -17,8 +17,8 @@ var app = express();
 // bitcoinapi
 bitcoinapi.setWalletDetails(settings.wallet);
 if (settings.heavy != true) {
-  bitcoinapi.setAccess('only', ['getinfo', 'getnetworkhashps','getnetworkhiveinfo','getbeecost', 'gethivedifficulty', 'getmininginfo','getdifficulty', 'getconnectioncount',
-    'getblockcount', 'getblockhash', 'getblock', 'getrawtransaction', 'getpeerinfo', 'gettxoutsetinfo']);
+  bitcoinapi.setAccess('only', ['getinfo', 'getnetworkhashps','getnetworkforgeinfo','gethammercost', 'getforgedifficulty', 'getmininginfo','getdifficulty', 'getconnectioncount',
+    'getblockcount', 'getblockhash', 'getblock', 'getrawtransaction', 'getpeerinfo', 'gettxoutsetinfo']); // adapt thor
 } else {
   // enable additional heavy api calls
   /*
