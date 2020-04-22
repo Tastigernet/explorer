@@ -5,15 +5,15 @@
 */
 {
   // name your instance!
-  "title": "Litecoin Cash (Hive-TestNet)",
+  "title": "Thor Explorer",
 
-  "address": "127.0.0.1:3001",
+  "address": "https://thor-explorer.tastiger.net",
 
   // coin name
-  "coin": "LitecoinCash",
+  "coin": "Thor",
 
   // coin symbol
-  "symbol": "LCC",
+  "symbol": "THOR",
 
   // logo
   "logo": "/images/logo.png",
@@ -26,34 +26,34 @@
   //     Cerulean, Cosmo, Cyborg, Darkly, Flatly, Journal, Lumen, Paper,
   //     Readable, Sandstone, Simplex, Slate, Spacelab, Superhero, United, Yeti
   // theme (see /public/themes for available themes)
-  "theme": "Cyborg",
+  "theme": "Superhero",
 
   // port to listen for requests on.
   "port" : 3001,
 
   // database settings (MongoDB)
   "dbsettings": {
-    "user": "iquidus",
-    "password": "3xp!0reR",
+    "user": "thor",
+    "password": "fjFwj6V-9&Hev7Y!", // set a random password here and use to create user
     "database": "explorerdb",
     "address": "localhost",
     "port": 27017
   },
 
   //update script settings
-  "update_timeout": 10,
-  "check_timeout": 250,
+  "update_timeout": 5,
+  "check_timeout": 5,
 
   // wallet settings
   "wallet": {
     "host": "127.0.0.1",
-    "port": 9999,
-    "user": "test",
-    "pass": "pass"
+    "port": 7776, // set a random RCP port number her, must be set in coin daemon
+    "user": "eL98wAKg98PFMsxfwTwYcnKu", // set random user here, must be set in coin daemon
+    "pass": "xHcyG7Vb2JxfPB87AxK9a2BN" // set random password here, must be set in coin daemon
   },
 
   // confirmations
-  "confirmations": 40,
+  "confirmations": 126,
 
   // language settings
   "locale": "locale/en.json",
@@ -63,14 +63,14 @@
     "api": true,
     "markets": false,
     "richlist": true,
-    "twitter": true,
+    "twitter": false,
     "facebook": false,
     "googleplus": false,
     "youtube": false,
     "search": true,
     "movement": true,
     "network": true,
-    "hive": true
+    "forge": true
   },
 
   // index page (valid options for difficulty are POW, POS or Hybrid)
@@ -82,20 +82,20 @@
 
   // ensure links on API page are valid
   "api": {
-    "blockindex": 4000,
-    "blockhash": "000000007a015e6efd4bd24760c872ff50b6a867e067503ca2eb99b27cd1db56",
-    "txhash": "593aba2173fdfe169c1298d03849b7a82cfebdebc176de87c6fd552f1473b8b2",
-    "address": "QSMSWV7Us6PB6hKueTzdNVN5nGysgC3bDd"
+    "blockindex": 5000,
+    "blockhash": "fa71f38ef3ca6f8adbb02baab6ef46f696d90b829c5b2d91fb7b2defa0ecc27b",
+    "txhash": "eaf656322ddc21d228f0f7cd2fcbbe9f2eb2b47a1b17eb45b4fa022d30f717d6",
+    "address": "MBaJQHvqpmD13SDskMgcQmYhjYhRnP6BuC"
   },
 
   // market settings
-  //supported markets: bittrex, poloniex, yobit, empoex, bleutrade, cryptopia, ccex
+  //supported markets: bittrex, poloniex, yobit, empoex, bleutrade, ccex
   //default market is loaded by default and determines last price in header
   "markets": {
-    "coin": "LCC",
+    "coin": "THOR",
     "exchange": "BTC",
     "enabled": ["yobit"],
-    "cryptopia_id": "1658",
+    // "cryptopia_id": "1658",
     "ccex_key" : "Get-Your-Own-Key",
     "default": "yobit"
   },
@@ -116,15 +116,21 @@
     "high_flag": 5000
   },
 
+  // Peers page settings
+  // ipstack_api_key: ipstack.com Geo IP. This is the replacement of http://freegeoip.net You need an API Key for the Requests 
+  "peers": {
+    "ipstack_api_key": "552691f6bdf0cd768018e92694a2ec7a" 
+  },
+
   // twitter, facebook, googleplus, youtube
-  "twitter": "@LitecoinCash",
-  "facebook": "@LitecoinCash",
+  "twitter": "@iquidus",
+  "facebook": "@yourfacebookpage",
   "googleplus": "yourgooglepluspage",
-  "youtube": "@Litecoincash",
+  "youtube": "@youryoutubechannel",
 
   //genesis
   "genesis_tx": "97ddfbbae6be97fd6cdf3e7ca13232a3afff2353e29badfab7f73011edd4ced9",
-  "genesis_block": "4966625a4b2851d9fdee139e56211a0d88575f59ed816ff5e6a63deb4e3e29a0",
+  "genesis_block": "1c223325e3add97854e33a24deaec44f375223d1cc7ea5851672337cec6aa2d8",
 
   //heavy (enable/disable additional heavy features)
   "heavy": false,
@@ -141,7 +147,7 @@
   // HEAVY: retreive from heavys getsupply api call
   // BALANCES : total of all address balances
   // TXOUTSET : retreive from gettxoutsetinfo api call
-  "supply": "COINBASE",
+  "supply": "gettxoutsetinfo",
  
   // how to acquire network hashrate
   // getnetworkhashps: uses getnetworkhashps api call, returns in GH/s
@@ -158,7 +164,8 @@
   // type (optional) = class of label, valid types: default, primary, warning, danger, success
   // url (optional) = url to link to for more information
   "labels": {
-    "JSoEdU717hvz8KQVq2HfcqV9A79Wihzusu": {"label": "Developers address", "type":"primary", "url":"http://example.com"},
+  //  "LY3wufP7dvpL83QLUbvFrW3Nko4rd5cFAv": {"label": "Developers address", "type":"primary", "url":"http://Thor.tk"},
+      "LY3wufP7dvpL83QLUbvFrW3Nko4rd5cFAv": {"label": "Premine", "type":"primary", "url":"https://thor-coin.com/"}
   //  "JSWVXHWeYNknPdG9uDrcBoZHztKMFCsndw": {"label": "Cryptsy"}
   }
 }

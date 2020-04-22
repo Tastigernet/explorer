@@ -24,7 +24,9 @@ block content
           tr
             th #{settings.locale.height}
             th #{settings.locale.difficulty}
+            th #{settings.locale.getforgedifficulty}
             th #{settings.locale.confirmations}
+            th #{settings.locale.type}
             if settings.heavy == true
               th Vote
             th.hidden-xs #{settings.locale.size} (kB)
@@ -37,7 +39,9 @@ block content
               - var block_size = block.size/1024
               td #{block.height}
               td #{block.difficulty.toFixed(4)}
+              td #{block.forgedifficulty.toFixed(4)}
               td #{block.confirmations}
+              td #{block.type}
               if settings.heavy == true
                 td  #{block.vote}
               td.hidden-xs #{block_size.toFixed(2)}
@@ -50,7 +54,9 @@ block content
                 - var block_size = block.size/1024
                 td #{block.height}
                 td #{block.difficulty.toFixed(4)}
+                td #{block.forgedifficulty.toFixed(4)}
                 td #{block.confirmations}
+                td #{block.type}
                 if settings.heavy == true
                   td  #{block.vote}
                 td.hidden-xs #{block_size.toFixed(2)}
@@ -62,7 +68,9 @@ block content
                 - var block_size = block.size/1024
                 td #{block.height}
                 td #{block.difficulty.toFixed(4)}
+                td #{block.forgedifficulty.toFixed(4)}
                 td #{block.confirmations}
+                td #{block.type}
                 if settings.heavy == true
                   td  #{block.vote}
                 td.hidden-xs #{block_size.toFixed(2)}

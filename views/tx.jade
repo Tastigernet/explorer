@@ -69,7 +69,7 @@ block content
                   each r in tx.vin
                     if r.addresses == 'coinbase' 
                       tr.info(style='text-align:center')
-                        td #{settings.locale.new_coins}
+                        td #{settings.locale.created_coins}
                     else
                       - var ramount = r.amount / 100000000
                       tr

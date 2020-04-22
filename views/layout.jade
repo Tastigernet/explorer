@@ -36,31 +36,31 @@ html
             $("#lblConnections").text(json.data[0].connections + ' connections');
             $("#lblBlockcount").text(json.data[0].blockcount + ' blocks');
             $("#lblX1").text(' ');
-            $("#gethivedifficulty1").text(json.data[0].gethivedifficulty);
-            $("#getbeecost1").text(json.data[0].getbeecost);
+            $("#getforgedifficulty1").text(json.data[0].getforgedifficulty);
+            $("#gethammercost1").text(json.data[0].gethammercost);
           }});
         }
-       function update_hive_diff(){   
-          $.ajax({url: '/api/gethivedifficulty', success: function(data){
-            $("#gethivedifficulty").text(data); 
-          }});
-        }
-
-       function update_bee_cost(){   
-         $.ajax({url: '/api/getbeecost', success: function(data){
-           $("#getbeecost").text(data); 
+       function update_forge_diff(){   
+          $.ajax({url: '/api/getforgedifficulty', success: function(data){
+            $("#getforgedifficulty").text(data); 
           }});
         }
 
-       function update_hive(){   
-          $.ajax({url: '/api/getnetworkhiveinfo', success: function(data){
-            $("#immature_bee_count").text(data.immature_bee_count);
-            $("#mature_bee_count").text(data.mature_bee_count);
-            $("#honeypot").text((data.honey_pot) / 10000000);
-            $("#immature_bct_count").text(data.immature_bct_count);
-            $("#mature_bct_count").text(data.mature_bct_count);
-            $("#gashi_index").text((((data.mature_bee_count) / 20160000) * 100).toFixed(2));
-            $("#gashi_index_stat").text((((data.mature_bee_count) / 20160000) * 100).toFixed(2)); 
+       function update_hammer_cost(){   
+         $.ajax({url: '/api/gethammercost', success: function(data){
+           $("#gethammercost").text(data); 
+          }});
+        }
+
+       function update_forge(){   
+          $.ajax({url: '/api/getnetworkforgeinfo', success: function(data){
+            $("#created_hammer_count").text(data.created_hammer_count);
+            $("#ready_hammer_count").text(data.ready_hammer_count);
+            $("#goldpot").text((data.gold_pot) / 10000000);
+            $("#created_bct_count").text(data.created_bct_count);
+            $("#ready_bct_count").text(data.ready_bct_count);
+            $("#gashi_index").text((((data.ready_hammer_count) / 20160000) * 100).toFixed(2));
+            $("#gashi_index_stat").text((((data.ready_hammer_count) / 20160000) * 100).toFixed(2)); 
           }});
         }
 
@@ -80,11 +80,11 @@ html
         });
         setInterval( function() {
           update_stats();
-        }, 60000);
+        }, 5000);
         update_stats();
-        update_hive_diff();
-        update_bee_cost();
-        update_hive();
+        update_forge_diff();
+        update_hammer_cost();
+        update_forge();
       });
   body
     - function format_unixtime(unixtime) {
@@ -127,11 +127,11 @@ html
               a.navbar-link(href='/') 
                 span.glyphicon.glyphicon-search
                 span.menu-text #{settings.locale.menu_explorer}
-            if settings.display.hive == true
-              li#hive
-                a.navbar-link(href='/hive')
-                  span.fa.fa-forumbee
-                  span.menu-text #{settings.locale.menu_hive}
+            if settings.display.forge == true
+              li#forge
+                a.navbar-link(href='/forge')
+                  span.fa.fa-bolt
+                  span.menu-text #{settings.locale.menu_forge}
             if settings.heavy == true
               li#reward
                 a.navbar-link(href='/reward')
@@ -213,7 +213,7 @@ html
         .col-md-2
           .panel.panel-default.hidden-sm.hidden-xs
             .panel-heading
-              strong Bee Population Index
+              strong Hammer Population Index
             .panel-body
                label#gashi_index_stat -
  

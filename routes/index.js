@@ -60,6 +60,7 @@ function route_get_tx(res, txid) {
                       timestamp: rtx.time,
                       blockhash: '-',
                       blockindex: -1,
+                      blocktype: '-',
                     };
                     res.render('tx', { active: 'tx', tx: utx, confirmations: settings.confirmations, blockcount:-1});
                   } else {
@@ -71,6 +72,7 @@ function route_get_tx(res, txid) {
                       timestamp: rtx.time,
                       blockhash: rtx.blockhash,
                       blockindex: rtx.blockheight,
+                      blocktype: rtx.blocktype,
                     };
                     lib.get_blockcount(function(blockcount) {
                       res.render('tx', { active: 'tx', tx: utx, confirmations: settings.confirmations, blockcount: blockcount});
@@ -130,8 +132,8 @@ router.get('/info', function(req, res) {
   res.render('info', { active: 'info', address: settings.address, hashes: settings.api });
 });
 
-router.get('/hive', function(req, res) {
-  res.render('hive', { active: 'hive', address: settings.address, hashes: settings.api });
+router.get('/forge', function(req, res) {
+  res.render('forge', { active: 'forge', address: settings.address, hashes: settings.api });
 });
 
 

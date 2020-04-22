@@ -30,6 +30,7 @@
     // transaction view
     "tx_title": "Transaction Details",
     "tx_block_hash": "Block Hash",
+    "tx_block_type" : "Type",
     "tx_recipients": "Recipients",
     "tx_contributors": "Input Addresses",
     "tx_hash": "Hash",
@@ -46,7 +47,6 @@
     "difficulty": "PoW Difficulty",
     "getforgedifficulty": "Forge Difficulty",
     "gethammercost": "Hammer Cost",
-    "type": "Type",
     "network": "Network",
     "height": "Height",
     "timestamp": "Timestamp",
