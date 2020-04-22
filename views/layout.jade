@@ -56,7 +56,7 @@ html
           $.ajax({url: '/api/getnetworkforgeinfo', success: function(data){
             $("#created_hammer_count").text(data.created_hammer_count);
             $("#ready_hammer_count").text(data.ready_hammer_count);
-            $("#goldpot").text((data.gold_pot) / 10000000);
+            $("#goldpot").text((data.gold_pot) / 100000000);
             $("#created_bct_count").text(data.created_bct_count);
             $("#ready_bct_count").text(data.ready_bct_count);
             $("#gashi_index").text((((data.ready_hammer_count) / 20160000) * 100).toFixed(2));
