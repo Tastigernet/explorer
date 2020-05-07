@@ -1,7 +1,6 @@
 #!/bin/bash
 
-rm /tmp/index.pid
-
+rm -f  tmp/index.pid
 while true;
 do echo "Running sync at $(date)";
 nodejs scripts/sync.js index update;

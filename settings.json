@@ -121,6 +121,7 @@
   "peers": {
     "ipstack_api_key": "552691f6bdf0cd768018e92694a2ec7a" 
   },
+  "ipstack_api_key": "552691f6bdf0cd768018e92694a2ec7a",
 
   // twitter, facebook, googleplus, youtube
   "twitter": "@iquidus",

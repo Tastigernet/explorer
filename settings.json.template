@@ -120,7 +120,7 @@
   "peers": {
     "ipstack_api_key": "YourIpstackAPIKey" 
   },
-
+  "ipstack_api_key": "YourIpstackAPIKey",
   // twitter, facebook, googleplus, youtube
   "twitter": "iquidus",
   "facebook": "yourfacebookpage",
